@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="shorticon.png" type="image/gif" sizes="16x16">
+    <title>Периметр трикутника</title>
+    <style type="text/css">
+        body{
+            background-color: rgb(58, 196, 206);
+        }
+        div{
+            font-size: 40px;
+            color: rgb(189, 71, 235);
+            text-align: center;
+            font-weight: 900;
+        }
+        .sq{
+            width: 40px;
+            height: 40px;
+            font-size: 30px;
+            text-align: center;
+            background-color: rgb(255, 255, 255);
+        }
+        .btn{
+            width: 250px;
+            height: 100px;
+            font-size: 40px;
+            background-color: rgb(240, 200, 147);
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function triangle() {
+        let a = +document.tr.a.value;
+    let b = +document.tr.b.value;
+    let c = +document.tr.c.value;
+    let sol = document.getElementById("tr_sol");
+    if (a<=0||b<=0||c<=0||(a+b)<=c||(a+c)<=b||(b+c)<=a){
+    string="Трикутника не існує 😕"
+    }else{
+    let P=a+b+c;
+    let p=P/2;
+    let S=Math.sqrt(p*(p-a)*(p-b)*(p-c))
+    string="Периметр трикутника дорівнює " +P+"<br>"+"Площа трикутника дорівнює " +S
+        }
+        sol.innerHTML = string;
+        }
+    </script>
+    <div>
+        <p>Знаходження периметру та площі трикутника</p>
+        <p>Тисніть "Розрахувати" і не забудьте ввести сторони трикутника! 😎</p>
+        <form name="tr" action="javascript:triangle()">
+            a <input class="sq" name="a" type="text" value="0" size="4">
+            b <input class="sq"  name="b" type="text" value="0" size="4">
+            c <input class="sq"  name="c" type="text" value="0" size="4">
+            <input class="btn" type="submit" value="Розрахувати">
+            <input class="btn" type="reset" name="reset" value="Скинути">
+            </form>
+            Результат: <span id="tr_sol"></span>
+    </div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="shorticon.png" type="image/gif" sizes="16x16">
+    <title>Кількість цифр</title>
+    <style>
+        body{
+            background: rgb(63,94,251);
+            background: linear-gradient(90deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+
+            font-size: 56px;
+            text-align: center;
+            font-family: Arial;
+            font-weight: 900;
+        }
+    </style>
+</head>
+<body>
+    <script>
+let something = prompt("Введіть число, щоб дізнатися кількість цифр")
+while(isNaN(something)){
+something = prompt("Я попросив число 😟")
+} 
+document.write("У числі " + something+ " кількість цифр: "+something.length)
+
+    </script>
+</body>
+</html>
